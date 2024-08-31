@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const Footer = ({ humidity, wind }) => {
+type Footer = {
+  humidity: number;
+  wind: number;
+};
+
+const Footer = ({ humidity, wind }: Footer) => {
   return (
     <motion.footer
       initial={{ opacity: 0 }}

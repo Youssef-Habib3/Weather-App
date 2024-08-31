@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const Main = ({ weather, temp, name }) => {
+type Main = {
+  weather: string;
+  temp: number;
+  name: string;
+};
+
+const Main = ({ weather, temp, name }: Main) => {
   return (
     <motion.main
       initial={{ opacity: 0 }}
